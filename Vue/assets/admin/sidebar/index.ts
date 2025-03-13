@@ -1,0 +1,9 @@
+export {default as HomeSVG} from "./HomeSVG.vue";
+export {default as ProductsSVG} from "./ProductsSVG.vue";
+export {default as PromotionSVG} from "./PromotionSVG.vue";
+export {default as CategorieSVG} from "./CategorieSVG.vue";
+export {default as StockSVG} from "./StockSVG.vue";
+export {default as ShippingCostSVG} from "./ShippingCostSVG.vue";
+export {default as CommandeSVG} from "./CommandeSVG.vue";
+export {default as UserSVG} from "./UserSVG.vue";
+export {default as CommentSVG} from "./CommentSVG.vue";
