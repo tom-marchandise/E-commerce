@@ -35,15 +35,17 @@ async function downloadCsv() {
 </script>
 
 <template>
-  <Card class="bg-transparent-10 text-text-900">
+  <Card class="flex flex-col h-[calc(100vh_-_7rem)] bg-transparent-10 rounded-xl p-5">
     <template #header>
-      <h1 class="font-bold text-xl text-dominant-500">Utilisateurs</h1>
+      <div class="flex items-center py-2">
+        <h2 class="font-bold text-2xl text-dominant-500 min-w-fit">Liste des utilisateurs</h2>
+      </div>
     </template>
 
     <template #content>
-      <ul class="flex flex-col">
-        <li v-for="user in users" :key="user.id" class="flex flex-col lg:hover:bg-gray-600 w-full px-5 py-3 duration-100 relative border-b-4 border-gray-500">
-          <span class="text-lg font-semibold">{{ user.first_name }} {{ user.last_name }}</span>
+      <ul class="flex flex-col gap-3 overflow-y-scroll rounded-xl scrollbar-hide">
+        <li v-for="user in users" :key="user.id" class="p-4 flex items-center gap-3 bg-transparent-10 hover:bg-secondary-200 rounded-xl cursor-pointer relative">
+          <span class="text-lg text-text-900 font-semibold">{{ user.first_name }} {{ user.last_name }}</span>
           <span class="text-md text-gray-500">{{ user.role }}</span>
           <div class="absolute right-4 bottom-3 gap-2 flex items-center">
             <UsersModal :user="user" />
@@ -54,8 +56,8 @@ async function downloadCsv() {
 
     <template #footer>
       <div class="flex justify-between text-ms items-center px-1">
-        <span class="text-gray-500 text-md">325 utilisateurs</span>
-        <UButton  @click="downloadCsv" class="mt-1 block border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4 max-h-[50rem] ">télécharger fiche utilisateur</UButton>
+        <span class="text-gray-500 text-md">23 utilisateurs</span>
+        <UButton  @click="downloadCsv" class="mt-1 block border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4 max-h-[50rem] ">Télécharger fiche utilisateur</UButton>
       </div>
     </template>
   </Card>

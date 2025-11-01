@@ -63,7 +63,7 @@ const handleSubmit = async () =>
 </script>
 <template>
   <div>
-    <UButton @click="isOpen = true" class="" :disabled="isSuperAdmin">Modifier le rôle</UButton>
+    <button :disabled="isSuperAdmin" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600" @click="isOpen = true">Modifier le rôle</button>
     <UModal v-model="isOpen" :overlay="false">
       <div class="p-4 max-h-[50rem] overflow-y-scroll">
             <form @submit.prevent="handleSubmit()">

@@ -45,7 +45,7 @@ if (products.value && products.value[0].category.parent_categoryNavigation) {
 
 <template>
 <div v-if="products" class="flex flex-col">
-  <div class="bg-[#F3F2F2] pt-12 pl-28">
+  <div class="bg-[#F3F2F2] dark:bg-black pt-12 pl-28">
     <UBreadcrumb :links="links" divider=">" class="justify-center text-lg"/>
   </div>
   <div v-if="products[0].category.inverseparent_categoryNavigation.length !== 0" class="p-4 dark:bg-black min-h-screen">

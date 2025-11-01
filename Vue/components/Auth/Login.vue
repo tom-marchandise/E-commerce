@@ -121,7 +121,6 @@ export default {
               class="h-[18px] w-[18px] ">
           Continuez avec Google
         </button>
-        
         <div class="flex w-full items-center gap-2 py-6 text-sm text-slate-600">
           <div class="h-px w-full bg-slate-200"></div>
           <span class="text-accent-400">OU</span>
